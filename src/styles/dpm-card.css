@@ -1,0 +1,135 @@
+/* Minimal subset of provided global.css for c-card markup */
+
+.c-card {
+  padding: var(--space-narrow, 8px);
+  border: solid 1px var(--semantic-border, #e0e0e0);
+  background-color: var(--semantic-bg-surface, #ffffff);
+  cursor: pointer;
+}
+
+.c-card:has(.c-card__grid, .c-card-item) {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: var(--space-narrow, 8px);
+}
+
+.c-card__grid {
+  min-width: 0;
+  min-height: 0;
+}
+
+.c-card__content > * + * {
+  margin-top: var(--space-narrow, 8px);
+}
+
+.c-card__thumb {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: var(--semantic-bg-subtle, #f0f0f0);
+}
+
+.c-card__thumb img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.c-card__title.--ellipsis-2 {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break: break-all;
+  color: var(--semantic-text-normal, #383838);
+  line-height: var(--narrow-lineHeight, 1.35);
+}
+
+.c-card__flex {
+  display: flex;
+  align-items: center;
+  gap: var(--space-veryNarrow, 4px);
+}
+
+.c-card__badge {
+  display: inline-flex;
+}
+
+.c-card__badge img {
+  height: 18px;
+  width: fit-content;
+}
+
+.c-card__price {
+  display: flex;
+  align-items: baseline;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--semantic-text-normal, #383838);
+}
+
+.c-card__price::before {
+  content: "¥";
+  font-size: 12px;
+}
+
+.c-card__flexRow {
+  display: flex;
+  gap: var(--space-veryNarrow, 4px);
+  cursor: default;
+  align-items: center;
+}
+
+.c-card__flexRow .--pushRight {
+  margin-left: auto;
+  width: fit-content;
+}
+
+.c-text-shopname-sm {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  word-break: break-all;
+  color: var(--semantic-link, #0c7ecc);
+  text-decoration: none;
+  padding-left: var(--space-default, 16px);
+  font-size: 12px;
+  line-height: var(--narrow-lineHeight, 1.35);
+  background: none;
+}
+
+.c-text-shopname-sm:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.c-button-add-favorite {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 19px;
+  flex: 0 0 20px;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.c-button-add-favorite::before {
+  content: "♡";
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 19px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--semantic-text-light, #b0b0b0);
+}
+
+.c-button-add-favorite.is-favorite-added::before {
+  content: "♥";
+  color: var(--semantic-favorite-selected, #ff4e6c);
+}
+

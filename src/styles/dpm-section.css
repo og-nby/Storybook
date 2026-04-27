@@ -1,0 +1,145 @@
+/* Minimal subset of provided global.css for section.html markup */
+
+.c-section {
+  background-color: var(--semantic-bg-surface, #ffffff);
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 16px;
+  border-top: 4px solid var(--semantic-border, #e0e0e0);
+  padding: var(--space-wide, 24px) var(--space-default, 16px);
+  min-width: 0;
+}
+
+.c-section * {
+  min-width: 0;
+}
+
+.c-heading-layout-justify-end {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-narrow, 8px);
+  width: 100%;
+}
+
+.c-heading-lv1 {
+  font: var(--font-heading);
+  color: var(--semantic-text-normal, #383838);
+}
+
+.c-text-link-arrow {
+  color: var(--semantic-link, #0c7ecc);
+  cursor: pointer;
+  font-size: 12px;
+  padding-right: 14px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 16px;
+}
+
+.c-text-link-arrow:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.c-text-link-arrow::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  font-size: 10px;
+}
+
+.u-overflow-reader-1 {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.u-display-hide-pc-tb {
+  display: block;
+}
+
+@media screen and (min-width: 641px) {
+  .u-display-hide-pc-tb {
+    display: none;
+  }
+}
+
+.c-swiper-standalone {
+  margin-bottom: calc(-1 * var(--space-wide, 24px));
+}
+
+.swiper-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.swiper-wrapper {
+  display: flex;
+  gap: var(--space-default, 16px);
+  padding-bottom: var(--space-narrow, 8px);
+}
+
+.swiper-slide {
+  flex: 0 0 auto;
+}
+
+.c-featuredShops {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-narrow, 8px);
+  padding: 0;
+}
+
+.c-card.--compact {
+  padding: var(--space-veryNarrow, 4px) var(--space-veryNarrow, 4px)
+    var(--space-narrow, 8px);
+  width: 88px;
+}
+
+.c-card.--compact .c-card__thumb {
+  background: var(--semantic-bg-subtle, #f0f0f0);
+}
+
+.c-card__pointArea {
+  display: flex;
+  align-items: center;
+  gap: var(--space-mostNarrow, 2px);
+  flex-wrap: wrap;
+  min-height: 20px;
+  color: var(--semantic-text-normal, #383838);
+}
+
+.c-point-card {
+  display: flex;
+  align-items: center;
+}
+
+.c-point-card.--centering {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.c-point-card__returnRate {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--color-primary, #cf0f30);
+}
+
+.c-point-card__returnRateUnit {
+  font-size: 12px;
+  margin-left: 1px;
+}
+
