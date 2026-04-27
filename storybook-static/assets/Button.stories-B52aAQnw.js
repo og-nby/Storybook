@@ -1,4 +1,4 @@
-import{B as u}from"./Button-CPmKxsd5.js";import"./jsx-runtime-D_zvdyIk.js";const b={title:"Components/Button",component:u,args:{children:"Button"}},r={args:{variant:"primary"}},a={args:{variant:"subtle"}},e={args:{variant:"primary",disabled:!0}};var s,t,o;r.parameters={...r.parameters,docs:{...(s=r.parameters)==null?void 0:s.docs,source:{originalSource:`{
+import{B as u}from"./Button-BOj5yDbO.js";import"./jsx-runtime-D_zvdyIk.js";const b={title:"Components/Button",component:u,args:{children:"Button"}},r={args:{variant:"primary"}},a={args:{variant:"subtle"}},e={args:{variant:"primary",disabled:!0}};var s,t,o;r.parameters={...r.parameters,docs:{...(s=r.parameters)==null?void 0:s.docs,source:{originalSource:`{
   args: {
     variant: 'primary'
   }
