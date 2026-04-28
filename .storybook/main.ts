@@ -11,6 +11,11 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
+  async viteFinal(viteConfig) {
+    // GitHub Pages では /<repo>/ 配下に配置されるため base を合わせる
+    const base = process.env.STORYBOOK_BASE ?? '/';
+    return { ...viteConfig, base };
+  },
 };
 
 export default config;
